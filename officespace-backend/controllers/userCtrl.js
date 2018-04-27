@@ -105,9 +105,10 @@ var bcrypt = require('bcrypt');
 
     //endpoint for grabbing session user object to be used accrossed entire app.
     // app.get("/api/session", function (req, res, next) {
-    getSession: function (req, res, next) {
-        res.json(req.session.user)
-    },
+    // getSession: function (req, res, next) {
+    //     console.log("Hit getSession");
+    //     res.json(req.session.user)
+    // },
 
     //get user info endpoint via query params
     // app.get('/api/profile/:username', function (req, res, next) {

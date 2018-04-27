@@ -1,5 +1,5 @@
 const userCtrl = require('../controllers/userCtrl');
-// const sessionCtrl = require('../controllers/sessionCtrl');
+const sessionCtrl = require('../controllers/sessionCtrl');
 // console.log(db, "this is db")
 module.exports = function (app) {
 
@@ -11,7 +11,7 @@ module.exports = function (app) {
 
     //endpoint for grabbing session user object to be used accrossed entire app.
     // app.get("/api/session", sessionCtrl.getSession);
-    app.get("/api/session", userCtrl.getSession);
+    app.get("/api/session", sessionCtrl.getSession);
     app.get("/api/logout", userCtrl.logout)
 
     //get user info endpoint via query params

@@ -24,31 +24,37 @@ class App extends Component {
   state = {
     user: {
       id: null,
-      name: '',
+      company: '',
       username: '',
       email: '',
       bucket: '',
-      profilePic: null,
+      imgUrl: null,
       loggedIn: false,
       isAdmin: false
     }
   };
 
   componentDidMount() {
+    console.log("Hit componentDidMount");
     this.checkLogin()
-    console.log(this.state)
+    console.log("One Mount State: ",this.state)
   }
 
   checkLogin = (cb) => {
+    console.log("Hit CheckLogin");
     axios.get("/api/session").then((res) => {
       console.log(this.state, "this is checkloging state")
-      console.log(res)
+      console.log(res);
       this.setState({ user: res.data });
-      console.log(this.state)
+      console.log("Check State: ",this.state);
       if (cb) {
         cb()
       }
-    })
+    }).catch(function (error) {
+        console.log(error.res);
+        console.log(error);
+
+    });
   }
 
   userDidLogin = (userData) => {

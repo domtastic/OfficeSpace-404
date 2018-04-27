@@ -22,6 +22,7 @@ app.use(session({
 
 function userSetup(req, res, next) {
     if (!req.session.user) {
+        console.log("Hit user setup");
         req.session.user = {
             id: null,
             company: '',
@@ -46,7 +47,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-require('./routes/api-routes.js')(app);
+require('./routes/api-routes')(app);
 app.get("*", function(req, res) {
     res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
