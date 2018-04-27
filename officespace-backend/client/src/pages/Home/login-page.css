@@ -1,0 +1,132 @@
+
+.body{
+height:100%;
+width:100%;
+margin-top:-100px;
+
+}
+
+
+.image{
+background-repeat: no-repeat;
+
+}
+
+
+.form-group{
+
+
+
+width:20em;
+	margin-left: 25px;
+	border-color: #000 solid 1px;
+}
+
+
+
+#inputTextEmail{
+	margin-top: -90px;
+}
+#inputTextPassword{
+margin-bottom: 70px;	
+}
+
+
+
+#logo{
+	  height: 20em;
+	  margin-left: 10px;
+	  margin-top: -5em;
+
+}
+
+.files{
+
+
+	height:20%;
+	 width: 3px;
+	  margin-left:70px;
+	  
+}
+
+
+
+.login-card{
+	
+/*background-image: "./img/untitled-2.png";*/
+
+
+background-color:#fcfbff;
+
+
+
+	 height: 30em;
+  width: 25em;
+
+  border-radius: 7px 7px 7px 7px;
+
+ box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4)  ; 
+	-webkit-box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4)  ; 
+	-moz-box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4)  ; 
+
+
+margin-left: -100px;
+
+
+		}
+		form{
+			margin-top: 8em;
+			margin-left: 15px;
+		}
+	
+
+.paragraph{
+	margin-top: 30px;
+		margin-left: 95px;
+}
+
+.btn{
+	margin-top: -60px;
+	width: 20em;
+	margin-left: 25px;
+	background-color: #2BAD9E;
+	color:#ffffff;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+    -ms-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 100px, 0);
+          opacity: 1;
+  transition: opacity 0.5s;
+  }
+  to{
+    opacity: 50;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+
+  }
+}
+
+.fadeIn{
+
+  animation-name: fadeIn;
+  animation-duration: .9s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+
+
+
+}
+.fadeIn: hover {
+  opacity: 0.01;
+}
+/*p{
+	margin-left: 200px;
+	color: #A8A8A8	;
+}*/
+

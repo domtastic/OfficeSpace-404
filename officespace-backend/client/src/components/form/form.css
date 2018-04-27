@@ -1,0 +1,47 @@
+
+
+.form-group{
+	
+
+	width: 730px;
+	height:40px;
+	margin-left: 10px;
+	padding-left: 10px;
+	padding:35px;
+	border-color: #000 solid 1px;
+	
+}
+
+.card{
+	float:right;
+
+	display: inline-block;
+	width: 50%;
+	height: 40px;
+	background-color:white;
+}
+
+#inputTextUsername{
+	width:50%;
+}
+
+#inputTextPassword{
+	width:50%;
+
+}
+
+#inputTextEmail{
+	width:50%;
+}
+
+#inputTextBucket{
+	width:50%;
+}
+
+#inputTextImgUrl{
+	width:50%;
+}
+
+#inputSelectRegion{
+	width:50%;
+}

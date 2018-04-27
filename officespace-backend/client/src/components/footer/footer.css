@@ -1,0 +1,14 @@
+.page-footer{
+background-color: #F5F7FA;
+
+
+color:#404A5D;
+margin-top: -35px;
+font-size: 12px;
+  padding: 0 10px;
+display: inline-grid;
+float:right;}
+
+.footer-copyright{
+	text-align:right;
+}

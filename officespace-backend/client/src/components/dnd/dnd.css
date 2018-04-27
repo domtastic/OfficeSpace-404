@@ -1,0 +1,27 @@
+.dropzone{
+	width: 100%;
+	height: 100%;
+}
+
+#dndCard{
+height:100%;
+ width:60%;
+  margin-top: 100px; 
+  margin-left: 500px;
+  padding-bottom: 30px;
+}
+
+#image
+{
+	margin-left: 235px;
+height:100px; 
+width:100px;
+}
+
+#dndButton{
+width:10vw;
+background-color: #F88561;
+border-color:#F88561;
+margin-top:30px;
+margin-left: 330px;
+}

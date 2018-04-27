@@ -1,0 +1,72 @@
+.admin-table{
+    width: 600px;
+    padding: 15px;
+}
+
+.admin-table-content{
+    border-radius: 5px;
+    background-color: #F8F8FF;
+    padding: 5px 10px 0 10px;
+    box-shadow: 2px 2px 2px #D3D3D3;
+}
+
+.admin-file-list{
+    padding: 15px;
+}
+
+.admin-file-list-element{
+    width: 95%;
+    border-bottom: 1px solid #D3D3D3;
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    line-height: 20px;
+    margin-top: 10px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+.admin-file-name{
+    flex-grow: 0.3;
+    color: #1E90FF;
+}
+
+.admin-file-company{
+    flex-grow: 0.5;
+}
+
+.admin-file-link{
+    flex-grow: 0.2;
+}
+
+.download-icon{
+    height: 20px;
+    width: auto;
+}
+
+.admin-list-header{
+    background-color: #F8F8FF;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 10px 0;
+    box-shadow: 2px 2px 2px #D3D3D3;
+}
+
+.admin-header-name{
+     flex-grow: 0.35;
+ }
+
+.admin-header-company{
+    flex-grow: 0.4;
+}
+
+.admin-header-link{
+    flex-grow: 0.25;
+}
