@@ -5,7 +5,7 @@ import {apiUrl} from '../config'
 export const createUser = (user) => {
 
 	const url = `${apiUrl}/users`;
-	console.log(user);
+	console.log('this is your user info: ', user);
     return axios.post(url, user);
 }
 

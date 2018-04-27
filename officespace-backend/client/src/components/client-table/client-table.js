@@ -7,17 +7,6 @@ class ClientTable extends Component {
         super(props);
 
         this.state = {
-            files: [{name: 'file1',
-            link: 'https://www.google.com/'},
-           {name: 'file2',
-            link: 'https://www.google.com/'},
-           {name: 'file3',
-            link: 'https://www.google.com/'},
-           {name: 'file4',
-            link: 'https://www.google.com/'},
-           {name: 'file5',
-            link: 'https://www.google.com/'},
-            ],
         };
 
     }

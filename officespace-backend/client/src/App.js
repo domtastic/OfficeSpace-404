@@ -12,6 +12,7 @@ import SideBar from './components/sidebar/side-bar';
 import UserForm from './pages/UserFormPage';
 import { Container, Row, Col } from 'reactstrap';
 import ManageClients from './pages/ManageClients/manage-clients';
+import SentFiles from './pages/SentFiles/SentFiles';
 import NotFound from './components/not-found/not-found';
 
 import ClientDash from "./pages/Client/ClientDash";
@@ -102,7 +103,7 @@ class App extends Component {
               <Route path='/dashboard' component={AdminDash} exact />
               {/* <Route path='/inbox' component={} exact /> */}
               <Route path='/clients' component={ManageClients} exact />
-              <Route path='/files/sent' component={AdminDash} exact />
+              <Route path='/files/sent' component={SentFiles} exact />
               <Route path='/signup' exact component={UserForm} {...this.props}/>
               <Route path='/files/new-file' component={Basic}/>
               <Route component={NotFound}/>

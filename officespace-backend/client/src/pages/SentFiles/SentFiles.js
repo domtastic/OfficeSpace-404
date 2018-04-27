@@ -3,11 +3,11 @@ import SideBar from '../../components/sidebar/side-bar';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/footer/footer';
 import {Col, Row, Container, Card, CardBody, CardTitle} from 'reactstrap';
-import CompanyCards from '../../components/card/card';
+import ClientTable from '../../components/client-table/client-table';
 
 
 
-const ManageClients = () => (
+const SentFiles = () => (
     <div className="main-panel" style={{
 
   width: "calc(100%-280px)",
@@ -24,8 +24,7 @@ const ManageClients = () => (
   <div className="content" style={{padding:"10px", marginLeft:"300px"}}>
 
  <Col md="12">
-
-<CompanyCards/>
+<ClientTable/>
 
 </Col>
 </div>
@@ -34,4 +33,4 @@ const ManageClients = () => (
 
 );
 
-export default ManageClients;
+export default SentFiles;
