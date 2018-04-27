@@ -1,6 +1,7 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
-/client/s3-config.json
+/client/src/s3-config.json
+/s3-config.json
 
 # dependencies
 /node_modules
