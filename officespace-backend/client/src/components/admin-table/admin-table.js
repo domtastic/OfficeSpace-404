@@ -45,7 +45,7 @@ class AdminTable extends Component {
                 <div className={'admin-file-list'}>
                     <div className={'admin-list-header'}>
                         <div className={'admin-header-name'}>File Name</div>
-                        <div className={'admin-header-company'}>Company</div>
+                        <div className={'admin-header-company'}>Company Name</div>
                         <div className={'admin-header-link'}>Download</div>
                     </div>
                     <div className={'admin-table-content'}>

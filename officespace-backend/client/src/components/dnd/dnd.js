@@ -21,12 +21,12 @@ class Basic extends Component {
     return (
   <div className="top">  
 <SideBar/>
-<Header/>
+{/* <Header/> */}
 <Card id="dndCard" >
 
 <CardHeader style={{backgroundColor:"#12a79d"}}>
           <h2 style={{marginTop:"20px", color:"#ffffff"}}>Upload</h2>
-          </CardHeader>
+</CardHeader>
           <ul>
             {
               this.state.files.map(f => <li key={f.name}>{f.name} - {f.size} bytes</li>)

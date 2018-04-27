@@ -9,10 +9,9 @@ import "./App.css";
 import Login from './pages/Home/login-page';
 import Footer from './components/footer/footer';
 import SideBar from './components/sidebar/side-bar';
-import Signup from './pages/Signup/Signup';
-import UserForm from './components/form/form';
+import UserForm from './pages/UserFormPage';
 import { Container, Row, Col } from 'reactstrap';
-import CompanyCards from './components/card/card';
+import ManageClients from './pages/ManageClients/manage-clients';
 import NotFound from './components/not-found/not-found';
 
 import ClientDash from "./pages/Client/ClientDash";
@@ -24,49 +23,39 @@ class App extends Component {
   state = {
     user: {
       id: null,
-      company: '',
+      name: '',
       username: '',
       email: '',
       bucket: '',
-      imgUrl: null,
+      profilePic: null,
       loggedIn: false,
       isAdmin: false
     }
   };
 
   componentDidMount() {
-    console.log("Hit componentDidMount");
     this.checkLogin()
-    console.log("One Mount State: ",this.state)
+    console.log(this.state)
   }
 
   checkLogin = (cb) => {
-    console.log("Hit CheckLogin");
     axios.get("/api/session").then((res) => {
       console.log(this.state, "this is checkloging state")
-      console.log(res);
+      console.log(res)
       this.setState({ user: res.data });
-      console.log("Check State: ",this.state);
+      console.log(this.state)
       if (cb) {
         cb()
       }
-    }).catch(function (error) {
-        console.log(error.res);
-        console.log(error);
-
-    });
+    })
   }
 
   userDidLogin = (userData) => {
     console.log(this.state)
     axios.post("/api/login", userData).then((res, cb) => {
-      console.log(userData);
-      this.checkLogin(userData);
-        if (this.state.user.isAdmin)
-        {return <Redirect to={`/admin/${this.state.user.username}`} />}
-        else {
-            return <Redirect to={`/client/${this.state.user.username}`} />
-        }
+      console.log(userData)
+      this.checkLogin(userData)
+      return <Redirect to={`/dashboard/${this.state.user.username}`} />
     })
   }
 
@@ -74,7 +63,7 @@ class App extends Component {
     axios.get("/api/logout").then((res) => {
       console.log(res)
       this.setState({ user: res.data });
-      return <Redirect to="/" />
+      <Redirect to="/" />
     })
   }
 
@@ -112,10 +101,10 @@ class App extends Component {
 
               <Route path='/dashboard' component={AdminDash} exact />
               {/* <Route path='/inbox' component={} exact /> */}
-              <Route path='/clients' component={ClientDash} exact />
-              {/* <Route path='/login' component={Form} exact /> */}
+              <Route path='/clients' component={ManageClients} exact />
+              <Route path='/files/sent' component={AdminDash} exact />
               <Route path='/signup' exact component={UserForm} {...this.props}/>
-              {/* <Route path='/client/:bucket' component={UserProfile}/> */}
+              <Route path='/files/new-file' component={Basic}/>
               <Route component={NotFound}/>
       
               

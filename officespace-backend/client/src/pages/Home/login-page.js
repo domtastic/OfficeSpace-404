@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { Link, Redirect } from 'react-router-dom';
 import "./login-page.css";
 import classNames from 'classnames'
+import _ from 'lodash'
+import {isEmail} from '../../helpers/email'
+import {createUser, login} from '../../helpers/user'
 
 import {Container, Row, Col, Card, CardTitle, CardBody} from 'reactstrap';
 
@@ -44,18 +47,19 @@ export default class Login extends Component {
 
  <Row>
  <Col md="6">
- <Card  style={{backgroundColor:"#A3B3CE", marginTop:"240px", height:"300px"}}>
-      <h1 style={{marginTop:"190px"}}>GeoFirm</h1>
+  <div style={{marginTop:"90px", marginLeft:"70px"}}>
+
+      <h1 style={{ color:"#F88561",  fontWeight:"500", fontSize:"100px"}}>GeoFirm</h1>
       <h3>Powered by OfficeSpace</h3>
 
-      </Card>
+     </div>
       </Col>
 
       <Col>
 
 <div className="body">
 
-    	<div className="login-card" style={{marginTop:"300px"}}>
+      <div className="login-card" style={{marginTop:"220px"}}>
 
 <div className="brand animated fadeIn">
  <h1 style={{color:"rgb(83, 198, 186)", marginLeft:"135px", paddingTop:"30px"}}>Sign In</h1>
@@ -95,7 +99,7 @@ export default class Login extends Component {
         </div>
 
 
-     	</div>
+      </div>
       </Col>
       </Row>
 </Container>

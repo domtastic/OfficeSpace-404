@@ -1,5 +1,5 @@
 .client-table{
-    width: 600px;
+    width: 80%;
     padding: 15px;
 }
 
@@ -7,7 +7,7 @@
     border-radius: 5px;
     background-color: #F8F8FF;
     padding: 5px 10px 0 10px;
-    box-shadow: 2px 2px 2px #D3D3D3;
+    box-shadow: 8px 8px 8px #D3D3D3;
 }
 
 .client-file-list{
@@ -27,29 +27,26 @@
 }
 
 .client-file-name{
-    flex-grow: 0.4;
-    color: #1E90FF;
+    flex-grow: 0.5;
+    color: #5063b8;
 }
 
 .client-file-link{
-    flex-grow: 0.4;
-}
-
-.client-spacer{
-    flex-grow: 0.2;
+    flex-grow: 0.55;
 }
 
 .download-icon{
     height: 20px;
     width: auto;
+    margin-left: 56%;
 }
 
 .client-list-header{
     background-color: #F8F8FF;
     width: 100%;
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    height: 30px;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
     line-height: 30px;
     margin-top: 10px;
     font-weight: bold;
@@ -57,6 +54,7 @@
     border-radius: 5px;
     padding: 10px 0;
     box-shadow: 2px 2px 2px #D3D3D3;
+    padding-left: 15px;
 }
 
 .client-header-content{
@@ -66,13 +64,13 @@
 }
 
 .client-spacer-header{
-    flex-grow: 0.2;
+    flex-grow: 0.4;
 }
 
 .client-header-name{
-    flex-grow: 0.45;
+    flex-grow: 0.5;
 }
 
 .client-header-link{
-    flex-grow: 0.35;
+    flex-grow: 0.2;
 }

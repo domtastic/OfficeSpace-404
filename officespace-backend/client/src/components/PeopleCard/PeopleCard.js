@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button, CardDeck} from 'reactstrap';
-
+import {
+  Carousel,
+  CarouselItem,
+  CarouselControl,
+  CarouselIndicators,
+  CarouselCaption
+} from 'reactstrap';
 import { Container, Row, Col } from 'reactstrap';
 
 
@@ -18,7 +24,7 @@ class PeopleCard extends Component {
       <div>
    
     <Row>
-        <Card style={{backgroundColor:"#F5F7FA", width:"60%",height:"40%", marginTop:"-10px", border:"1px solid #e3e3e3", borderRadius:"4px", marginBottom:"30px",  marginLeft:"40px",boxShadow:"5px 10px 18px #b7b7b7"}}>
+        <Card style={{backgroundColor:"#F5F7FA", width:"60vw",height:"40vh", marginTop:"-10px", border:"1px solid #e3e3e3", borderRadius:"4px", marginBottom:"30px",  marginLeft:"50px",boxShadow:"5px 10px 18px #888888"}}>
                     <CardTitle style={{padding: "15px 30px 0px", fontWeight:"600", fontSize:"22px"}}>{this.props.person.name}</CardTitle>
 
           <CardImg top  src={this.props.person.image} style={{ width:"85px", height:"100px", paddingBottom:"15px", paddingTop:"10px", marginLeft:"30px"}} alt="Card image cap" />

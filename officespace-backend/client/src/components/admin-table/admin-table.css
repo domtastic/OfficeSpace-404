@@ -1,5 +1,5 @@
 .admin-table{
-    width: 600px;
+    width: 80%;
     padding: 15px;
 }
 
@@ -7,7 +7,7 @@
     border-radius: 5px;
     background-color: #F8F8FF;
     padding: 5px 10px 0 10px;
-    box-shadow: 2px 2px 2px #D3D3D3;
+    box-shadow: 8px 8px 8px #D3D3D3;
 }
 
 .admin-file-list{
@@ -27,12 +27,12 @@
 }
 
 .admin-file-name{
-    flex-grow: 0.3;
-    color: #1E90FF;
+    flex-grow: 0.5;
+    color: #5063b8;
 }
 
 .admin-file-company{
-    flex-grow: 0.5;
+    flex-grow: 0.55;
 }
 
 .admin-file-link{
@@ -49,7 +49,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    height: 30px;
+    height: 50px;
     line-height: 30px;
     margin-top: 10px;
     font-weight: bold;
@@ -57,16 +57,17 @@
     border-radius: 5px;
     padding: 10px 0;
     box-shadow: 2px 2px 2px #D3D3D3;
+    padding-left: 15px;
 }
 
 .admin-header-name{
-     flex-grow: 0.35;
+     flex-grow: 0.4;
  }
 
 .admin-header-company{
-    flex-grow: 0.4;
+    flex-grow: 0.5;
 }
 
 .admin-header-link{
-    flex-grow: 0.25;
+    flex-grow: 0.2;
 }

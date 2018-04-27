@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import Header from '../Header/Header';
 import './side-bar.css';
 import {Col, Row, Container} from 'reactstrap';
 
@@ -56,6 +56,8 @@ closeDropdownMenu(event){
     return (
 // <div className="content" >
       // <div className="main-panel">
+<div>
+{/* <Header/> */}
 
  
 
@@ -129,7 +131,7 @@ null
 
  </nav>
 
-
+</div>
 
 
    

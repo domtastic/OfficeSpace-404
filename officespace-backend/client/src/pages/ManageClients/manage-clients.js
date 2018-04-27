@@ -2,39 +2,36 @@ import React from 'react';
 import SideBar from '../../components/sidebar/side-bar';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/footer/footer';
-import ClientTable from '../../components/client-table/client-table';
 import {Col, Row, Container, Card, CardBody, CardTitle} from 'reactstrap';
+import CompanyCards from '../../components/card/card';
 
 
-const ClientDashboard = () => (
+
+const Dashboard = () => (
     <div className="main-panel" style={{
 
-  position: "relative",
   width: "calc(100%-280px)",
   height:"95vh",
-
+  overflow: "auto",
   backgroundColor:"#fafcfe",
   minHeight: "100%",
-overflow: "auto",
-
   boxShadow: "0 30px 130px 0 rgba(90, 105, 116, 0.1)"
 }}>
-  {/* <Header/> */}
 
 <SideBar/>
  
- <div className="content" style={{padding:"10px", marginLeft:"300px"}}>
 
-<Col md="12">
+  <div className="content" style={{padding:"10px", marginLeft:"300px"}}>
 
-<ClientTable/>
+ <Col md="12">
+
+<CompanyCards/>
 
 </Col>
 </div>
 <Footer/>
-</div>  
-
+</div>
 
 );
 
-export default ClientDashboard;
+export default Dashboard;

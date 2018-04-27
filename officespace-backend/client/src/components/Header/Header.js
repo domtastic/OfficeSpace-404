@@ -14,32 +14,38 @@ import Badge from '../badge/badge';
                                                     marginTop:"-25px",
                                                     paddingBottom:"40px", 
                                                     border: "none", 
-                                                    marginLeft:"-10px",
+                                                    marginLeft:"20px",
                                                     backgroundColor:"#ffffff", 
                                                     boxShadow: "10px 0 50px 0 rgba(61, 110, 146, 0.1)",
 
                                                 }}>
-        <ul className="nav navbar-nav">
-                    <li>    <img src={require("../img/photo.jpeg")} className="img-circle" alt="User Image" /></li>
-                    <li>    <img src="http://byrobin.nl/store/wp-content/uploads/sites/4/2016/03/local.png" className="notif" />
-</li>
-                    <li>  <div className="username">Demo User</div></li>
+    
+        <div className="user-wrapper">
 
-  <li><div className="title">Admin</div></li>
-                    </ul>
+<input type="text" placeholder="Search.." />
 
-   <div className="user-wrapper">
-
-
-
-                  <div className="user">
+               
 
     
 
  <div className="user-panel">
 
+      <div className="userinfo">
+       
+            
+        <ul className="nav navbar-nav">
+     
+                   
+                    <li>  <div className="username">Demo User</div></li>
+                      <li><div className="title">Admin</div></li>
 
-                <div className="userinfo">
+                     <li>    <img src={require("../img/photo.jpeg")} className="img-circle" alt="User Image" /></li>
+                    <li>    <img src="http://byrobin.nl/store/wp-content/uploads/sites/4/2016/03/local.png" className="notif" />
+</li>
+
+                    </ul>
+
+
 
  
 
@@ -50,7 +56,8 @@ import Badge from '../badge/badge';
 
 </div>
 
-   </div>
+
+ 
             </Navbar>
             </Container>
         

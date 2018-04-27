@@ -1,6 +1,6 @@
 
 
-.form-group{
+.signin-form-group{
 	
 
 	width: 730px;
@@ -13,8 +13,6 @@
 }
 
 .card{
-	float:right;
-
 	display: inline-block;
 	width: 50%;
 	height: 40px;
