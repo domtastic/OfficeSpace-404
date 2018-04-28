@@ -12,11 +12,8 @@ class UserForm extends Component
 
 	constructor(props)
 	{
-		super(props);
-	
-
-
-
+        super(props);
+        
 		this.state={user: {
 			username: null,
 			email: null,
@@ -148,12 +145,10 @@ onClickSubmitForm(event)
 	// Create an S3 client
 	var s3 = new AWS.S3();
 	// Create a bucket and upload something into it
-	var bucketName = this.state.user.username + uuid.v4();
+	var bucketName = "geo-firm";
 	var keyName = this.state.user.username;
-
-	s3.createBucket({ Bucket: bucketName }, function (err, data) {
-		var params = { Bucket: bucketName, Key: keyName };
-		// s3.putObject(params, function (err, data) {
+	var params = { Bucket: bucketName, Key: keyName };
+	s3.putObject(params, function (err, data) {
 			if (err)
 				console.log(err)
 			else
@@ -163,7 +158,6 @@ onClickSubmitForm(event)
 	const user={
 		...this.state.user,
 		bucket: event.target.value,
-		isAdmin: false
 	};
 
 	this.setState({user});

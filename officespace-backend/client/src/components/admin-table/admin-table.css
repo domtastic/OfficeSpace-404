@@ -1,21 +1,26 @@
+#cardTable{
+    width:70%;
+    background-color:#F8F8FF ;
+}
+#clientFiles{
+    background-color: rgb(83, 198, 186);
+}
 .admin-table{
     width: 100%;
     max-width: 830px;
     padding: 15px;
     min-width: 510px;
+    margin-left: 0%;
 }
-
 .admin-table-content{
     border-radius: 5px;
-    background-color: #F8F8FF;
+    background-color: #fcfdff;
     padding: 5px 10px 0 10px;
     box-shadow: 2px 2px 2px #D3D3D3;
 }
-
 .admin-file-list{
     padding: 15px;
 }
-
 .admin-file-list-element{
     width: 95%;
     border-bottom: 1px solid #D3D3D3;
@@ -27,30 +32,25 @@
     margin-left: 2.5%;
     margin-right: 2.5%;
 }
-
 .admin-file-name{
     width: 55%;
     text-align: left;
     padding-left: 30px;
     color: #1E90FF;
 }
-
 .admin-file-company{
     width: 30%;
 }
-
 .admin-file-link{
     width: 13%;
     margin-left: 10%;
 }
-
 .download-icon{
     height: 20px;
     width: auto;
 }
-
 .admin-list-header{
-    background-color: #F8F8FF;
+    background-color: #fcfdff;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -63,18 +63,15 @@
     padding: 10px 0;
     box-shadow: 2px 2px 2px #D3D3D3;
 }
-
 .admin-header-name{
     width: 45%;
     text-align: left;
     padding-left: 50px;
 }
-
 .admin-header-company{
     width: 35%;
     padding-left: 3%;
 }
-
 .admin-header-link{
     width: 20%;
 }

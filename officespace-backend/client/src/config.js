@@ -20,7 +20,7 @@ import { accessKeyId, secretAccessKey } from './s3-config.json'
 export const s3Config = {
     accessKeyId: accessKeyId,
     secretAccessKey: secretAccessKey,
-    region: "us-west-2"
+    region: "us-east-2"
 };
 
-export const s3Bucket = 'OfficeSpace';
+export const s3Bucket = 'geo-firm';

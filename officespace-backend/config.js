@@ -16,6 +16,6 @@ export const url = 'http://localhost:3000';
 export const s3Config = {
     accessKeyId: accessKeyId,
     secretAccessKey: secretAccessKey,
-    region: 'us-west-2'
+    region: 'us-east-2'
  
 };

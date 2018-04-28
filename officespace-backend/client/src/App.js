@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle} from 'reactstrap';
+import {AWS} from 'aws-sdk'
 import axios from 'axios';
 
 import logo from "./logo.svg";
@@ -21,7 +22,11 @@ import Header from './components/Header/Header';
 import Basic from './components/dnd/dnd';
 
 class App extends Component {
-  state = {
+	constructor(props)
+	{
+		super(props);
+	
+  this.state = {
     user: {
       id: null,
       name: '',
@@ -32,11 +37,14 @@ class App extends Component {
       loggedIn: false,
       isAdmin: false
     }
+    
   };
-
-  componentDidMount(cb) {
-    this.checkLogin(cb)
-    console.log(this.state)
+  this.userDidLogin = this.userDidLogin.bind(this);
+  this.checkLogin = this.checkLogin.bind(this);
+}
+  componentDidMount() {
+    this.checkLogin();
+    console.log(this.state);
   }
 
   checkLogin = (cb) => {
@@ -55,13 +63,14 @@ class App extends Component {
     console.log(this.state)
     axios.post("/api/login", user).then((res) => {
       console.log('this is the user info', user)
-      this.checkLogin(cb)
-      // if (this.state.redirect && this.props.user.isAdmin) {
-      //   return <Redirect to={`/admin/${this.props.user.username}`} />;
-      // }
-      // else if (this.state.redirect && !this.props.user.isAdmin){
-      //     return <Redirect to={`/client/${this.props.user.username}`} />;
-      // }
+      this.checkLogin(cb).then(() =>{
+      if (this.state.redirect && this.props.user.isAdmin) {
+        return <Redirect to={`/admin/${this.props.user.username}`} />;
+      }
+      else if (this.state.redirect && !this.props.user.isAdmin){
+          return <Redirect to={`/client/${this.props.user.username}`} />;
+      }
+    })
     });
     
   }

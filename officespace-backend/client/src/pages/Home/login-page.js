@@ -27,7 +27,7 @@ export default class Login extends Component {
   }
 
   render() {
-    //      console.log("Redirect: ", this.state.redirect, "this.props.userInfo.isAdmin :", this.props.user.isAdmin, "this.props.userInfo.username: ", this.props.user.username);
+    console.log("Redirect: ", this.state.redirect, "this.props.userInfo.isAdmin :", this.props.user.isAdmin, "this.props.userInfo.username: ", this.props.user.username);
     // if (this.state.redirect && this.props.user.isAdmin) {
     //   return <Redirect to={`/admin/${this.props.user.username}`} />;
     // }

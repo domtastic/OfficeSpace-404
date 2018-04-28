@@ -3,6 +3,7 @@ import SideBar from '../../components/sidebar/side-bar';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/footer/footer';
 import ClientTable from '../../components/client-table/client-table';
+import ChevronTable from '../../components/chevron-table/chevron-table'
 import {Col, Row, Container, Card, CardBody, CardTitle} from 'reactstrap';
 
 

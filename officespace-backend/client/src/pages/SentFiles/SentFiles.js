@@ -3,7 +3,8 @@ import SideBar from '../../components/sidebar/side-bar';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/footer/footer';
 import {Col, Row, Container, Card, CardBody, CardTitle} from 'reactstrap';
-import ClientTable from '../../components/client-table/client-table';
+import IniTECH from '../../components/client-table/client-table';
+import ChevronTable from '../../components/chevron-table/chevron-table'
 
 
 
@@ -24,7 +25,8 @@ const SentFiles = () => (
   <div className="content" style={{padding:"10px", marginLeft:"300px"}}>
 
  <Col md="12">
-<ClientTable/>
+<IniTECH/>
+<ChevronTable/>
 
 </Col>
 </div>

@@ -1,22 +1,18 @@
 import React, { Component } from 'react';
-import './client-table.css';
+import '.././client-table/client-table.css';
 
-class IniTECH extends Component {
+class ChevronTable extends Component {
 
     constructor(props){
         super(props);
 
         this.state = {
-            files: [{name: 'b_lumbergh1.gif',
-            link: 'https://s3.us-east-2.amazonaws.com/geo-firm/iniTECH/b_lumbergh1.gif'},
-           {name: 'initech.jpg',
-            link: 'https://s3.us-east-2.amazonaws.com/geo-firm/iniTECH/initech.jpg'},
-           {name: 'OfficeSpace-Milton.jpg',
-            link: 'https://s3.us-east-2.amazonaws.com/geo-firm/iniTECH/OfficeSpace-Milton.jpg'},
-           {name: 'the-bobs.jpg',
-            link: 'https://s3.us-east-2.amazonaws.com/geo-firm/iniTECH/the-bobs.jpg'},
-           {name: 'Tps_report.png',
-            link: 'https://s3.us-east-2.amazonaws.com/geo-firm/iniTECH/Tps_report.png'},
+            files: [{name: 'Chevron_Logo.png',
+            link: 'https://s3.us-east-2.amazonaws.com/geo-firm/Chevron/Chevron_Logo.png'},
+           {name: 'chevron_oil.jpg',
+            link: 'https://s3.us-east-2.amazonaws.com/geo-firm/Chevron/chevron_oil.jpg'},
+           {name: 'chevronconfirms.jpg',
+            link: 'https://s3.us-east-2.amazonaws.com/geo-firm/Chevron/chevronconfirms.jpg'},
             ],
         };
 
@@ -37,7 +33,7 @@ class IniTECH extends Component {
         return (
             <div className="client-table">
                 <div className={'client-file-list'}>
-                <h1>iniTECH</h1>
+                <h1>Chevron</h1>
                     <div className={'client-list-header'}>
                         <div className={'client-header-content'}>
                             <div className={'client-header-name'}>File Name</div>
@@ -69,4 +65,4 @@ class IniTECH extends Component {
     }
 }
 
-export default IniTECH;
+export default ChevronTable;
