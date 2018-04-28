@@ -68,6 +68,7 @@ var bcrypt = require('bcrypt');
     // signin endpoint logic
     // app.post("/api/signUp", function (req, res, next) {
     signUp: function (req, res, next) {
+        console.log('Hit signUp route')
         console.log(req.body)
         //to store a hased password into the database we need to first salt our password. this will tell bcrypt how many time to pass through the users password to generate the hash
         bcrypt.genSalt(10, function (err, salt) {
@@ -75,8 +76,9 @@ var bcrypt = require('bcrypt');
             bcrypt.hash(req.body.password, salt, function (err, hash) {
                 // Store hash in your password User.
                 req.body.password = hash;
+                console.log("hashed password: ",req.body.password);
                 User.create(req.body).then(function (UserData) {
-                    console.log(UserData)
+                    console.log("created user data:", UserData);
                     // var userObj = {
                     //   id: UserData._id,
                     //   name: UserData.name,
