@@ -56,10 +56,10 @@ class App extends Component {
     axios.post("/api/login", user).then((res, cb) => {
       console.log('this is the user info', user)
       this.checkLogin(user).then(() => {
-      if (!this.state.redirect && this.props.user.isAdmin) {
+      if (this.state.redirect && this.props.user.isAdmin) {
         return <Redirect to={`/admin/${this.props.user.username}`} />;
       }
-      else if (!this.state.redirect && !this.props.user.isAdmin){
+      else if (this.state.redirect && !this.props.user.isAdmin){
           return <Redirect to={`/client/${this.props.user.username}`} />;
       }
     });
