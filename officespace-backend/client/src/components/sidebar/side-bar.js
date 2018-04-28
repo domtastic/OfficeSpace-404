@@ -97,11 +97,8 @@ closeDropdownMenu(event){
 
 
             <li className="active"><a href="/dashboard"> <i className="fas fa-tachometer-alt fa-lg" id="icons"></i>Dashboard</a></li>
-
-
-            
             <li><a href="/clients"><i className="fas fa-users fa-lg" style={{marginTop:"0px", marginLeft:"-10px"}}id="icons"></i> Manage Clients</a></li>
-
+            <li><a href="/signup"> <i className="fas fa-user-plus fa-lg" id="icons"></i>  Sign Up Client</a></li>
             <li>
 
 
