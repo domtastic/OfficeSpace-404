@@ -67,7 +67,7 @@ export default class Login extends Component {
  <Form>
 
 
-        <div className="form-group"style={{marginLeft:"25px", marginTop:"-30px"}}>
+        <div className="form-group"style={{marginLeft:"25px", marginTop:"-50px"}}>
          
                   <Input type="text" className="form-control inputTextEmail" id="username" placeholder="Username" onChange={this.handleChange} style={{width:"100%"}}/>
         </div>
