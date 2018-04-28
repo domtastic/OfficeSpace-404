@@ -1,4 +1,4 @@
-// import { accessKeyId, secretAccessKey } from './s3-config.json'
+import { accessKeyId, secretAccessKey } from './s3-config.json'
 // import {AWS} from 'aws-sdk';
 //  const production = false;
 
@@ -14,5 +14,13 @@
 //         pass: 'SendGridApiKey'  // generated ethereal password
 //     }
 // };
-//
-// export const s3Bucket = 'OfficeSpace';
+
+// export const url = 'http://localhost:3001';
+
+export const s3Config = {
+    accessKeyId: accessKeyId,
+    secretAccessKey: secretAccessKey,
+    region: "us-west-2"
+};
+
+export const s3Bucket = 'OfficeSpace';
