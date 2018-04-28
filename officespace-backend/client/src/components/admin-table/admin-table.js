@@ -52,11 +52,8 @@ class AdminTable extends Component {
                 <Card id="cardTable">
                 <CardHeader id="clientFiles"><h3 style={{color:"white"}}>Most Recent Files</h3></CardHeader>
                 <div className="admin-table">
-                    <div className={'admin-file-list'}>
-                        <div className={'admin-list-header'}>
-                        <Label check>
-                 
-                  </Label>
+                <div className={'admin-file-list'}>
+                 <div className={'admin-list-header'}>
                   <div className={'admin-header-name'}>File Name</div>
                             <div className={'admin-header-company'}>Company Name</div>
                             <div className={'admin-header-link'}>Download</div>

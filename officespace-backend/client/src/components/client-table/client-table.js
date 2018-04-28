@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Card, CardHeader, Label, Input} from 'reactstrap';
 import './client-table.css';
 
 class IniTECH extends Component {
@@ -35,6 +36,8 @@ class IniTECH extends Component {
         const files = this.state.files;
 
         return (
+            <Card id="cardTable">
+            <CardHeader id="clientFiles"><h3 style={{color:"white"}}>Most Recent Files</h3></CardHeader>
             <div className="client-table">
                 <div className={'client-file-list'}>
                 <h1>iniTECH</h1>
@@ -51,6 +54,7 @@ class IniTECH extends Component {
                             {
                                 files.map((file, index)=>{
                                     return <div key={index} className={'client-file-list-element'}>
+                                       <div className={'admin-header-checkbox'}><input type="checkbox" className="form-check-input" id="checkbox" /></div>
                                         <div className={'client-file-name'}>{file.name}</div>
                                         <div className={'client-file-link'}>
                                             <a href={file.link} target={'_blank'}>
@@ -65,6 +69,7 @@ class IniTECH extends Component {
                     </div>
                 </div>
             </div>
+            </Card>
         );
     }
 }
