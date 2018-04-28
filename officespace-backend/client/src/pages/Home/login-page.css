@@ -13,6 +13,7 @@ background-repeat: no-repeat;
 }
 
 
+
 .form-group{
 
 
@@ -24,10 +25,10 @@ background-repeat: no-repeat;
 
 
 
-.inputTextUsername{
+.inputTextEmail{
 	margin-top: -90px;
 }
-#password{
+#inputTextPassword{
 margin-bottom: 70px;	
 }
 
@@ -53,7 +54,6 @@ margin-bottom: 70px;
 
 .login-card{
 	
-/*background-image: "./img/untitled-2.png";*/
 
 
 background-color:#fcfbff;
@@ -89,7 +89,7 @@ margin-left: -100px;
 	margin-top: -60px;
 	width: 20em;
 	margin-left: 25px;
-	background-color: #2BAD9E;
+	background-color: rgb(83, 198, 186);
 	color:#ffffff;
 }
 
@@ -132,9 +132,17 @@ margin-left: -100px;
 /*style={{ marginTop:"-200px", height:"300px"}}
 */
 
+#officeSpace{
+font-family: 'Pacifico', cursive;
+color:#3A4E62;
 
+}
 
+#geo{
+	color: #95a4dc;
+	margin-top: 250px;
 
+}
 
 
 

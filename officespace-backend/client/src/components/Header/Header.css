@@ -9,6 +9,10 @@
   margin-top: 250px;
 }
 
+.username{
+  margin-top: -6px;
+}
+
 .user-wrapper .user .userinfo .title{
   font-size: 12px;
   font-weight: 300;
@@ -32,11 +36,11 @@
 }
 
 .img-circle{
-height:40px;
- width:50px;
+height:35px;
+ width:40px;
  border-radius: 60%;
- 
- margin-left: 300px;
+margin-top: 0px;
+ margin-left: 650px;
     object-position:center right;
 
 
@@ -47,17 +51,18 @@ ul{
 }
 
 .notif{
-  height: 40px;
+  height: 45px;
   width: 50px;
   position: absolute;
   display: inline-block;
-/*  margin-left: 400px;*/
-  margin-top: -20px;
+  margin-left: 600px;
+  margin-top: -2px;
 
 }
 
 .navbar .nav{
-  height:5px;
+  height:0;
+  margin-left: 250px;
 
 }
 
@@ -69,12 +74,82 @@ ul{
 }
 }
 
-.nav>li{
 
-  position: relative;
-  display:inline-block;
+
+.form-controls{
+  margin-top: 50px;
+  margin-left: 600px;
 }
 
+.fa-search{
+  margin-top: -10px;
 
 
+}
+
+#searchBar{
+width: 400px;
+margin-top: 5px;
+border: 1px solid #e7e7e7;
+ border-radius: 7px 7px 7px 7px;
+ margin-left: 10px;
+ background-color: #fcfbff;
+ }
+
+
+.navbar .navbar-form{
+  margin-top: 15px;
+  margin-left: 160px;
+}
+
+.navbar .navbar-form .input-group-addon{
+  border: 0;
+  background-color: transparent;
+  font-size: 16px;
+  padding: 0 7px;
+  border-radius: 4px 0 0 4px;
+  width: auto;
+}
+
+.navbar i{
+  font-size: 18px;
+}
+
+.navbar .navbar-form .form-controls{
+  padding: 8px 6px;
+  height: 40px;
+  border-radius: 0;
+  border: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  display:inline-block;
+  width: 100%;
+  vertical-align: middle;
+  box-shadow: none;
+  margin-top: -8px;
+  margin-left: -10px;
+}
+
+.nav{
+  position:relative;
+  display: block;
+}
+
+.navbar .navbar-nav >  a{
+  padding: 28px 25px;
+  color: #25265F;
+  font-family: "Nunito";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 17px;
+}
+
+#searchIcon{
+  margin-left: -60px;
+
+}
+
+.presentation{
+  margin-top: -13px;
+}
 

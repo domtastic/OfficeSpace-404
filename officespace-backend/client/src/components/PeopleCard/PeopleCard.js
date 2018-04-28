@@ -31,7 +31,7 @@ class PeopleCard extends Component {
           <CardBody style={{backgroundColor:"white", padding:"10px 30px 20px 30px"}}>
             <CardSubtitle>{this.props.person.company}</CardSubtitle>
             <CardText >{this.props.person.description}</CardText>
-            <Button style={{backgroundColor:"#71AC95", marginTop:"-20px", float:"right", width:"100px"}}>Delete</Button>
+            <Button style={{backgroundColor:"#2BAD9E", marginTop:"-20px", float:"right", width:"100px", borderColor:"#2BAD9E"}}>Delete</Button>
           </CardBody>
         </Card>
 </Row>

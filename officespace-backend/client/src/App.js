@@ -14,6 +14,7 @@ import UserForm from './components/form/form';
 import { Container, Row, Col } from 'reactstrap';
 import ManageClients from './pages/ManageClients/manage-clients';
 import SentFiles from './pages/SentFiles/SentFiles';
+import ClientPage from './pages/clientPage/clientpage';
 import NotFound from './components/not-found/not-found';
 
 import ClientDash from "./pages/Client/ClientDash";
@@ -39,8 +40,8 @@ class App extends Component {
     }
     
   };
-  this.userDidLogin = this.userDidLogin.bind(this);
-  this.checkLogin = this.checkLogin.bind(this);
+  // this.userDidLogin = this.userDidLogin.bind(this);
+  // this.checkLogin = this.checkLogin.bind(this);
 }
   componentDidMount() {
     this.checkLogin();
@@ -63,14 +64,7 @@ class App extends Component {
     console.log(this.state)
     axios.post("/api/login", user).then((res) => {
       console.log('this is the user info', user)
-      this.checkLogin(cb).then(() =>{
-      if (this.state.redirect && this.props.user.isAdmin) {
-        return <Redirect to={`/admin/${this.props.user.username}`} />;
-      }
-      else if (this.state.redirect && !this.props.user.isAdmin){
-          return <Redirect to={`/client/${this.props.user.username}`} />;
-      }
-    })
+      this.checkLogin(cb)
     });
     
   }
@@ -116,7 +110,7 @@ class App extends Component {
                 }} />
 
               <Route path='/dashboard' component={AdminDash} exact  {...this.props}/>
-              {/* <Route path='/inbox' component={} exact /> */}
+              <Route path='/client/initech' component={ClientPage} exact />
               <Route path='/clients' component={ManageClients} exact />
               <Route path='/files/sent' component={SentFiles} exact />
               <Route path='/signup' exact component={UserForm} {...this.props}/>

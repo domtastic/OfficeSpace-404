@@ -9,7 +9,7 @@ import Badge from '../badge/badge';
 
 
             <Navbar className="main-header" style={{backgroundColor:"#efefef",
-                                                    height:"80px", 
+                                                    height:"88px", 
                                                     width:"100%",
                                                     marginTop:"-25px",
                                                     paddingBottom:"40px", 
@@ -21,43 +21,53 @@ import Badge from '../badge/badge';
                                                 }}>
     
         <div className="user-wrapper">
+        
+      
+        
 
-<input type="text" placeholder="Search.." />
+
 
                
 
-    
 
- <div className="user-panel">
-
-      <div className="userinfo">
-       
             
         <ul className="nav navbar-nav">
      
+                  
+          <div className="navbar-form navbar-left">
+            <div className="form-groups">
+            <span className="input-group-addon">
+             <i className="fas fa-search" id="searchIcon" style={{fontSize:"1.1em", marginTop:"-70px"}}></i>
+             </span>
+             <input type="text" placeholder="Search..." className="form-controls" id="searchBar" />
+             </div>
+             </div>
+            
+             </ul>
+              </div>
+            <div className="navbar-form navbar-right">
+             <ul className="nav navbar-nav navbar-right">
+         
+     
+              <li className="presentation"><img src="http://byrobin.nl/store/wp-content/uploads/sites/4/2016/03/local.png" className="notif" />
+                </li>
+          <li className="presentation"><img src={require("../img/photo.jpeg")} className="img-circle" alt="User Image" />
+               </li>
+
+                    <li className="dropdown"><div className="username">Demo User</div></li>
+
+              
+                  
+             </ul>
+
                    
-                    <li>  <div className="username">Demo User</div></li>
-                      <li><div className="title">Admin</div></li>
 
-                     <li>    <img src={require("../img/photo.jpeg")} className="img-circle" alt="User Image" /></li>
-                    <li>    <img src="http://byrobin.nl/store/wp-content/uploads/sites/4/2016/03/local.png" className="notif" />
-</li>
-
-                    </ul>
+ </div>
 
 
 
- 
 
 
-  </div>
-</div>
-
-
-</div>
-
-
- 
             </Navbar>
             </Container>
         

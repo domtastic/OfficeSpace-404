@@ -2,10 +2,16 @@ import React, { Component } from "react";
 import { Link, Redirect } from 'react-router-dom';
 import "./login-page.css";
 import classNames from 'classnames'
+import _ from 'lodash'
+
 
 import {Container, Row, Col, Card, CardTitle, CardBody} from 'reactstrap';
+
+  
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
   
+
+
 export default class Login extends Component {
      constructor(props) {
     super(props);
@@ -13,7 +19,7 @@ export default class Login extends Component {
     this.state = {
       username: "",
       password: "",
-      redirect: false
+        redirect: false
     };
   }
   validateForm() {
@@ -27,15 +33,15 @@ export default class Login extends Component {
   }
 
   render() {
-    console.log("Redirect: ", this.state.redirect, "this.props.userInfo.isAdmin :", this.props.user.isAdmin, "this.props.userInfo.username: ", this.props.user.username);
-    // if (this.state.redirect && this.props.user.isAdmin) {
-    //   return <Redirect to={`/admin/${this.props.user.username}`} />;
-    // }
-    // else if (this.state.redirect && !this.props.user.isAdmin){
-    //     return <Redirect to={`/client/${this.props.user.username}`} />;
-    // }
+    if (this.state.redirect && this.props.userInfo.isAdmin) {
+      return <Redirect to={`/admin/${this.props.userInfo.username}`} />;
+    }
+    else if (this.state.redirect && !this.props.userInfo.isAdmin){
+        return <Redirect to={`/client/${this.props.userInfo.username}`} />;
+    }
 
     return (
+   
  <Container fluid>
 
 
@@ -43,8 +49,9 @@ export default class Login extends Component {
  <Col md="6">
   <div style={{marginTop:"90px", marginLeft:"70px"}}>
 
-      <h1 style={{ color:"#F88561",  fontWeight:"500", fontSize:"100px"}}>GeoFirm</h1>
-      <h3>Powered by OfficeSpace</h3>
+      <h1 style={{
+  fontWeight:"500", fontSize:"100px"}} id="geo">GeoFirm</h1>
+      <h5 style={{marginLeft:"80px"}} id="officeSpace">Powered by OfficeSpace</h5>
 
      </div>
       </Col>
@@ -67,23 +74,21 @@ export default class Login extends Component {
  <Form>
 
 
-        <div className="form-group"style={{marginLeft:"25px", marginTop:"-50px"}}>
+        <div className="form-group"style={{marginLeft:"25px", marginTop:"-30px"}}>
          
-                  <Input type="text" className="form-control inputTextEmail" id="username" placeholder="Username" onChange={this.handleChange} style={{width:"100%"}}/>
+                  <Input type="email" className="form-control inputTextEmail" id="inputTextEmail" placeholder="Email" onChange={this.handleChange} style={{width:"100%"}}/>
         </div>
    
     
        <div className="form-group" style={{marginLeft:"25px"}}>
        
-                      <Input type="password" className="form-control" id="password" placeholder="Password" onChange={this.handleChange} style={{width:"100%", marginTop:"0"}}/>
+                      <Input type="password" className="form-control" id="inputTextPassword" placeholder="Password" onChange={this.handleChange} style={{width:"100%", marginTop:"0"}}/>
        
-                    <button className="btn btn" style={{marginTop:"-80px", width:"100%", marginLeft:"0", backgroundColor:"#53C6BA"}} onClick={() => {
-                                            
+                    <Link to={`/dashboard`}><button className="btn btn" style={{marginTop:"-80px", width:"100%", marginLeft:"0", backgroundColor:"#53C6BA"}} onClick={() => {
                       this.props.handleLogin(this.state, () => {
                         this.setState({ redirect: true });
-                        console.log('this is coming from login page', this.state);
                       })
-                    }}>Sign in</button>
+                    }}>Sign in</button></Link>
           <p style={{marginTop:"-10px", marginLeft:"10px", color: "#A8A8A8 "}}>Forgot Password?</p>
         
    </div>
@@ -98,6 +103,7 @@ export default class Login extends Component {
       </div>
       </Col>
       </Row>
+
 </Container>
 
   )

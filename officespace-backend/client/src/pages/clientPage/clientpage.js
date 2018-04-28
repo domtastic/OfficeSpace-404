@@ -2,38 +2,40 @@ import React from 'react';
 import SideBar from '../../components/sidebar/side-bar';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/footer/footer';
-import AdminTable from '../../components/admin-table/admin-table';
+import ClientTable from '../../components/client-table/client-table';
+import ChevronTable from '../../components/chevron-table/chevron-table'
 import {Col, Row, Container, Card, CardBody, CardTitle} from 'reactstrap';
 
 
-
-
-const Dashboard = () => (
+const ClientPage = () => (
     <div className="main-panel" style={{
 
+  position: "relative",
   width: "calc(100%-280px)",
   height:"95vh",
-  overflow: "auto",
+
   backgroundColor:"#fafcfe",
   minHeight: "100%",
+overflow: "auto",
+
   boxShadow: "0 30px 130px 0 rgba(90, 105, 116, 0.1)"
 }}>
 <Header/>
+
 <SideBar/>
  
+ <div className="content" style={{padding:"10px", marginLeft:"300px"}}>
 
-  <div className="content" style={{padding:"10px", marginLeft:"300px"}}>
+<Col md="12">
 
- <Col md="12">
-
-<AdminTable/>
-
+<ChevronTable/>
 
 </Col>
 </div>
 <Footer/>
-</div>
+</div>  
+
 
 );
 
-export default Dashboard;
+export default ClientPage;

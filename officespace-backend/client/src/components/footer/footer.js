@@ -6,6 +6,7 @@ class Footer extends Component {
     return (
      
 <Container fluid>
+<div className="wrapper">
 <footer className="page-footer">
 
     <p className="footer-copyright" style={{ lineHeight:"1"}}>
@@ -13,6 +14,7 @@ class Footer extends Component {
     </p>
 
 </footer>
+</div>
 </Container>
 
                       
