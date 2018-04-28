@@ -31,6 +31,7 @@ export default class Login extends Component {
   }
 
   render() {
+         console.log("Redirect: ", this.state.redirect, "this.props.userInfo.isAdmin :", this.props.userInfo.isAdmin, "this.props.userInfo.username: ", this.props.userInfo.username);
     if (this.state.redirect && this.props.userInfo.isAdmin) {
       return <Redirect to={`/admin/${this.props.userInfo.username}`} />;
     }
@@ -72,16 +73,21 @@ export default class Login extends Component {
 
         <div className="form-group"style={{marginLeft:"25px", marginTop:"-30px"}}>
          
+<<<<<<< HEAD
                   <Input className="form-control inputTextUsername" id="inputTextUsername" placeholder="User Name" onChange={this.handleChange} style={{width:"100%"}}/>
+=======
+                  <Input type="text" className="form-control inputTextEmail" id="username" placeholder="Username" onChange={this.handleChange} style={{width:"100%"}}/>
+>>>>>>> 33ce82b7c8c8edcb6c9f4ce1302e60e276a93a32
         </div>
    
     
        <div className="form-group" style={{marginLeft:"25px"}}>
        
-                      <Input type="password" className="form-control" id="inputTextPassword" placeholder="Password" onChange={this.handleChange} style={{width:"100%", marginTop:"0"}}/>
+                      <Input type="password" className="form-control" id="password" placeholder="Password" onChange={this.handleChange} style={{width:"100%", marginTop:"0"}}/>
        
                     <button className="btn btn" style={{marginTop:"-80px", width:"100%", marginLeft:"0", backgroundColor:"#53C6BA"}} onClick={() => {
                       this.props.handleLogin(this.state, () => {
+                          console.log(this.state);
                         this.setState({ redirect: true });
                       })
                     }}>Sign in</button>
