@@ -1,5 +1,6 @@
 const userCtrl = require('../controllers/userCtrl');
 const sessionCtrl = require('../controllers/sessionCtrl');
+const emailCtrl = require('../controllers/emailCtrl');
 // console.log(db, 'this is db')
 module.exports = function (app) {
 
@@ -18,4 +19,7 @@ module.exports = function (app) {
     app.get('/api/profile/:username', userCtrl.getAny);
     //update profile route
     app.put('/api/update/:username', userCtrl.update);
+
+//    emails
+    app.post('/api/emailSignUp', emailCtrl.signUp);
 }
