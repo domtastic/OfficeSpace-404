@@ -51,11 +51,11 @@ class App extends Component {
     })
   }
 
-  userDidLogin = (userData) => {
+  userDidLogin = (userInfo) => {
     console.log(this.state)
-    axios.post("/api/login", userData).then((res, cb) => {
-      console.log(userData)
-      this.checkLogin(userData)
+    axios.post("/api/login", userInfo).then((res, cb) => {
+      console.log(userInfo)
+      this.checkLogin(userInfo)
       return <Redirect to={`/dashboard/${this.state.user.username}`} />
     })
   }

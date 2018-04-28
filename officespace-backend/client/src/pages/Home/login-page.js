@@ -72,7 +72,7 @@ export default class Login extends Component {
 
         <div className="form-group"style={{marginLeft:"25px", marginTop:"-30px"}}>
          
-                  <Input type="email" className="form-control inputTextEmail" id="inputTextEmail" placeholder="Email" onChange={this.handleChange} style={{width:"100%"}}/>
+                  <Input className="form-control inputTextUsername" id="inputTextUsername" placeholder="User Name" onChange={this.handleChange} style={{width:"100%"}}/>
         </div>
    
     
@@ -80,11 +80,11 @@ export default class Login extends Component {
        
                       <Input type="password" className="form-control" id="inputTextPassword" placeholder="Password" onChange={this.handleChange} style={{width:"100%", marginTop:"0"}}/>
        
-                    <Link to={`/dashboard`}><button className="btn btn" style={{marginTop:"-80px", width:"100%", marginLeft:"0", backgroundColor:"#53C6BA"}} onClick={() => {
+                    <button className="btn btn" style={{marginTop:"-80px", width:"100%", marginLeft:"0", backgroundColor:"#53C6BA"}} onClick={() => {
                       this.props.handleLogin(this.state, () => {
                         this.setState({ redirect: true });
                       })
-                    }}>Sign in</button></Link>
+                    }}>Sign in</button>
           <p style={{marginTop:"-10px", marginLeft:"10px", color: "#A8A8A8 "}}>Forgot Password?</p>
         
    </div>
