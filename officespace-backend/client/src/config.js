@@ -1,4 +1,4 @@
-// import { accessKeyId, secretAccessKey } from './s3-config.json'
+import { accessKeyId, secretAccessKey } from './s3-config.json'
  const production = false;
 
  export const apiUrl = production ? 'http://domain.com/api' : 'http://localhost:3000/api';
@@ -15,8 +15,8 @@
 // export const url = 'http://localhost:3001';
 
 export const s3Config = {
-    // accessKeyId: accessKeyId,
-    // secretAccessKey: secretAccessKey,
+    accessKeyId: accessKeyId,
+    secretAccessKey: secretAccessKey,
     region: "us-west-2"
 };
 
