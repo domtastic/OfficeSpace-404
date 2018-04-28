@@ -56,7 +56,13 @@ app.get("*", function(req, res) {
 var MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/users';
 
 mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI).then(()=>{
+    console.log("mongoose DB connected");
+
+    app.listen(PORT, function () {
+        console.log("Listening on port: " + PORT);
+    });
+});
 
 // for remote server
 // const url = 'mongodb://34.218.212.52/OfficeSpace';
@@ -71,6 +77,3 @@ mongoose.connect(MONGODB_URI);
 
 
 
-app.listen(PORT, function () {
-    console.log("Listening on port: " + PORT);
-});

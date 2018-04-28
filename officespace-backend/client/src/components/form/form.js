@@ -6,7 +6,7 @@ import AWS from 'aws-sdk';
 import uuid from 'uuid';
 import Header from '../Header/Header';
 import {Card, CardBody} from 'reactstrap';
-
+import axios from 'axios';
 class UserForm extends Component
 {
 
@@ -23,7 +23,8 @@ class UserForm extends Component
 			password: null,
 			region: null,
 			bucket: null,
-			imgUrl: null
+			imgUrl: null,
+				isAdmin: false
 		}
 
 	};
@@ -134,7 +135,13 @@ this.setState({user});
 
 }
 
-
+    userDidSignup = (userData, cb) => {
+        console.log(userData)
+        axios.post("/api/signUp", userData).then((res) => {
+            console.log(res);
+            alert('client signed up');
+        })
+    }
 
 onClickSubmitForm(event)
 { 
@@ -155,15 +162,14 @@ onClickSubmitForm(event)
 	});
 	const user={
 		...this.state.user,
-		bucket: event.target.value
+		bucket: event.target.value,
+		isAdmin: false
 	};
 
 	this.setState({user});
 	console.log(this.state.user);
-	// createUser(this.state.user).then((response) => {
 
-	// console.log("Hey i got data after send post", response);
-	// });
+	 this.userDidSignup(this.state.user);
 }
 
 	render()
