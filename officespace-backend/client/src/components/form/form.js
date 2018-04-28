@@ -151,15 +151,15 @@ onClickSubmitForm(event)
 	var bucketName = this.state.user.username + uuid.v4();
 	var keyName = this.state.user.username;
 
-	s3.createBucket({ Bucket: bucketName }, function () {
+	s3.createBucket({ Bucket: bucketName }, function (err, data) {
 		var params = { Bucket: bucketName, Key: keyName };
-		s3.putObject(params, function (err, data) {
+		// s3.putObject(params, function (err, data) {
 			if (err)
 				console.log(err)
 			else
 				console.log("Successfully uploaded data to " + bucketName + "/");
 		});
-	});
+	// });
 	const user={
 		...this.state.user,
 		bucket: event.target.value,
@@ -217,13 +217,13 @@ onClickSubmitForm(event)
                                 <select onChange={this.onChangeInputSelectRegion} className="form-control form-input-position"
                                         id="inputSelectRegion" >
                                     <option value="option">Select Region</option>
-                                    <option value="option">US-East-1 (Ohio)</option>
-                                    <option value="option">US-East-2 (N. Virginia)</option>
-                                    <option value="option">US-West-1 (Oregon)</option>
-                                    <option value="option">US-West-2 (N. California)</option>
-                                    <option value="option">EU-West-1 (Ireland)</option>
-                                    <option value="option">EU-West-2 (London)</option>
-                                    <option value="option">EU-West-3 (Paris)</option>
+                                    <option value="us-east-1">US-East-1 (Ohio)</option>
+                                    <option value="us-east-2">US-East-2 (N. Virginia)</option>
+                                    <option value="us-west-1">US-West-1 (N. California)</option>
+                                    <option value="us-west-2">US-West-2 (Oregon)</option>
+                                    <option value="eu-west-1">EU-West-1 (Ireland)</option>
+                                    <option value="eu-west2">EU-West-2 (London)</option>
+                                    <option value="eu-west-3">EU-West-3 (Paris)</option>
                                 </select>
                             </div>
                             <button onClick={this.onClickSubmitForm}  className="btn btn-info w-10 form-submit-button">Submit</button>

@@ -27,13 +27,13 @@ export default class Login extends Component {
   }
 
   render() {
-         console.log("Redirect: ", this.state.redirect, "this.props.userInfo.isAdmin :", this.props.userInfo.isAdmin, "this.props.userInfo.username: ", this.props.userInfo.username);
-    if (this.state.redirect && this.props.userInfo.isAdmin) {
-      return <Redirect to={`/admin/${this.props.userInfo.username}`} />;
-    }
-    else if (this.state.redirect && !this.props.userInfo.isAdmin){
-        return <Redirect to={`/client/${this.props.userInfo.username}`} />;
-    }
+    //      console.log("Redirect: ", this.state.redirect, "this.props.userInfo.isAdmin :", this.props.user.isAdmin, "this.props.userInfo.username: ", this.props.user.username);
+    // if (this.state.redirect && this.props.user.isAdmin) {
+    //   return <Redirect to={`/admin/${this.props.user.username}`} />;
+    // }
+    // else if (this.state.redirect && !this.props.user.isAdmin){
+    //     return <Redirect to={`/client/${this.props.user.username}`} />;
+    // }
 
     return (
  <Container fluid>
@@ -78,9 +78,10 @@ export default class Login extends Component {
                       <Input type="password" className="form-control" id="password" placeholder="Password" onChange={this.handleChange} style={{width:"100%", marginTop:"0"}}/>
        
                     <button className="btn btn" style={{marginTop:"-80px", width:"100%", marginLeft:"0", backgroundColor:"#53C6BA"}} onClick={() => {
+                                            
                       this.props.handleLogin(this.state, () => {
-                          console.log('this is coming from login page', this.state);
                         this.setState({ redirect: true });
+                        console.log('this is coming from login page', this.state);
                       })
                     }}>Sign in</button>
           <p style={{marginTop:"-10px", marginLeft:"10px", color: "#A8A8A8 "}}>Forgot Password?</p>

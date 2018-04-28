@@ -34,35 +34,34 @@ class App extends Component {
     }
   };
 
-  componentDidMount() {
-    this.checkLogin()
+  componentDidMount(cb) {
+    this.checkLogin(cb)
     console.log(this.state)
   }
 
   checkLogin = (cb) => {
     axios.get("/api/session").then((res) => {
       console.log(this.state, "this is checkLogin state")
-      console.log(res)
+      console.log('this is the response from CheckLogin ',res)
       this.setState({ user: res.data });
-      console.log('this is the user login', this.state)
+      console.log('this is the user login from checkLogin', this.state)
       if (cb) {
         cb()
       }
     })
   }
 
-  userDidLogin = (user) => {
+  userDidLogin = (user, cb) => {
     console.log(this.state)
-    axios.post("/api/login", user).then((res, cb) => {
+    axios.post("/api/login", user).then((res) => {
       console.log('this is the user info', user)
-      this.checkLogin(user).then(() => {
-      if (this.state.redirect && this.props.user.isAdmin) {
-        return <Redirect to={`/admin/${this.props.user.username}`} />;
-      }
-      else if (this.state.redirect && !this.props.user.isAdmin){
-          return <Redirect to={`/client/${this.props.user.username}`} />;
-      }
-    });
+      this.checkLogin(cb)
+      // if (this.state.redirect && this.props.user.isAdmin) {
+      //   return <Redirect to={`/admin/${this.props.user.username}`} />;
+      // }
+      // else if (this.state.redirect && !this.props.user.isAdmin){
+      //     return <Redirect to={`/client/${this.props.user.username}`} />;
+      // }
     });
     
   }
@@ -87,9 +86,9 @@ class App extends Component {
         <Router>
           <div>
             <Switch>
-              <Route path='/' exact render={(props) => (
-                <Login userInfo={this.state.user} {...props} handleLogin={this.userDidLogin} />
-              )}/> */}
+               <Route path='/' exact render={(props) => (
+                <Login user={this.state.user} {...props} handleLogin={this.userDidLogin} />
+              )}/>
                 <Route path='/admin/:username' render={(props)=> {
                   console.log('User Logged in: ', this.state.user.loggedIn, "| User is Admin: ", this.state.user.isAdmin);
                   return this.state.user.isAdmin ? (
@@ -101,13 +100,13 @@ class App extends Component {
                 <Route path='/client/:username' render={(props)=> {
                     console.log('User Logged in: ', this.state.user.loggedIn, "| User is Admin: ", this.state.user.isAdmin);
                     return !this.state.user.isAdmin ? (
-                        <ClientDash userInfo={this.state.user} {...props}/>
+                        <ClientDash user={this.state.user} {...props}/>
                     ) : (
                         <Redirect to='/'/>
                     )
                 }} />
 
-              <Route path='/dashboard' component={AdminDash} exact />
+              <Route path='/dashboard' component={AdminDash} exact  {...this.props}/>
               {/* <Route path='/inbox' component={} exact /> */}
               <Route path='/clients' component={ManageClients} exact />
               <Route path='/files/sent' component={SentFiles} exact />

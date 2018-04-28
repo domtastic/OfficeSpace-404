@@ -48,11 +48,10 @@ var bcrypt = require('bcrypt');
                                 bucket: user.bucket,
                                 region: user.region
                             }
-                            //we update the loggedIn key to have a true value. we can use this value on the fron end to see if the user is logged in or not.
-                            req.session.user.loggedIn = true;
-                            req.session.user.isAdmin = user.isAdmin;
+
                             //here the session's user object is updated with the users data. we can hit our /session endpoing witha  get request from the front end and get our user object.
                             req.session.user = userObj;
+                            console.log('this is the user obj', userObj);
 
                             console.log("this is session", req.session)
                             res.status(200).send('Successful login')
