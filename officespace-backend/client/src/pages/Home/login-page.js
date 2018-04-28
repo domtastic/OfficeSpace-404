@@ -4,12 +4,8 @@ import "./login-page.css";
 import classNames from 'classnames'
 
 import {Container, Row, Col, Card, CardTitle, CardBody} from 'reactstrap';
-
-  
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
   
-
-
 export default class Login extends Component {
      constructor(props) {
     super(props);
@@ -73,11 +69,7 @@ export default class Login extends Component {
 
         <div className="form-group"style={{marginLeft:"25px", marginTop:"-30px"}}>
          
-<<<<<<< HEAD
-                  <Input className="form-control inputTextUsername" id="inputTextUsername" placeholder="User Name" onChange={this.handleChange} style={{width:"100%"}}/>
-=======
                   <Input type="text" className="form-control inputTextEmail" id="username" placeholder="Username" onChange={this.handleChange} style={{width:"100%"}}/>
->>>>>>> 33ce82b7c8c8edcb6c9f4ce1302e60e276a93a32
         </div>
    
     

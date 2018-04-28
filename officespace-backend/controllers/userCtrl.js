@@ -18,11 +18,11 @@ var bcrypt = require('bcrypt');
         User.findOne({
             username: req.body.username
         })
-            .then(function (UserData) {
-                console.log(UserData, "this is user data");
+            .then(function (user) {
+                console.log(user, "this is user data");
                 //if the database does not find a user with that username we will revice a null value from our database. null values are a little "special" in relation to JS.
                 //this is how we would correctly do a check for a null value if recieved
-                if (!UserData && typeof UserData === "object") {
+                if (!user && typeof user === "object") {
                     //this will send an error code to our front end for the user not existing
                     res.status(404).send('ohhh no, there is a problem with the username or password!')
                 } else {
@@ -30,7 +30,7 @@ var bcrypt = require('bcrypt');
                     //AKA: our users password coming in from the front end. the second parameter bcrypt wants us to pass in the hashed password that we stored in the User. lastly it wants a callback funtion
                     //bcrypt will hash the pasword coming in from the front end and compaire it to the users hashed password from our database it will give us a boolean value to let us know if the
                     //passwords were the same
-                    bcrypt.compare(req.body.password, UserData.password, function (err, bcryptRes) {
+                    bcrypt.compare(req.body.password, user.password, function (err, bcryptRes) {
                         // bcryptRes == true or false
 
                         //if the response is false send an error to the front end letting the user know that the passwords did not match.
@@ -39,20 +39,20 @@ var bcrypt = require('bcrypt');
                         } else {
                             //if the response from bcrypt was true we know our users password matched and we can now format the user data coming from the database to be sent to the font end
                             var userObj = {
-                                id: UserData.id,
-                                company: UserData.company,
-                                username: UserData.username,
-                                email: UserData.email,
-                                imgUrl: UserData.imgUrl,
-                                isAdmin: UserData.isAdmin,
-                                bucket: UserData.bucket,
-                                region: UserData.region
+                                id: user.id,
+                                username: user.username,
+                                email: user.email,
+                                imgUrl: user.imgUrl,
+                                isAdmin: user.isAdmin,
+                                loggedIn: true,
+                                bucket: user.bucket,
+                                region: user.region
                             }
                             //we update the loggedIn key to have a true value. we can use this value on the fron end to see if the user is logged in or not.
                             req.session.user.loggedIn = true;
-                            req.session.user.isAdmin = UserData.isAdmin;
+                            req.session.user.isAdmin = user.isAdmin;
                             //here the session's user object is updated with the users data. we can hit our /session endpoing witha  get request from the front end and get our user object.
-                            req.session.user.currentUser = userObj;
+                            req.session.user = userObj;
 
                             console.log("this is session", req.session)
                             res.status(200).send('Successful login')
@@ -77,18 +77,18 @@ var bcrypt = require('bcrypt');
                 // Store hash in your password User.
                 req.body.password = hash;
                 console.log("hashed password: ",req.body.password);
-                User.create(req.body).then(function (UserData) {
-                    console.log("created user data:", UserData);
+                User.create(req.body).then(function (user) {
+                    console.log("created user data:", user);
                     // var userObj = {
-                    //   id: UserData._id,
-                    //   name: UserData.name,
-                    //   username: UserData.username,
-                    //   email: UserData.email,
-                    //   profilePic: UserData.profilePic
+                    //   id: user._id,
+                    //   name: user.name,
+                    //   username: user.username,
+                    //   email: user.email,
+                    //   profilePic: user.profilePic
                     // }
                     // req.session.user.loggedIn = true;
                     // req.session.user.currentUser = userObj;
-                    res.json(UserData);
+                    res.json(user);
                 }).catch(function (err) {
 
                     res.status(404).send('ohhh no, there is a user with the username')
@@ -118,17 +118,17 @@ var bcrypt = require('bcrypt');
         console.log(req.param);
         User.findOne({
             username: req.params.username
-        }).then(function (UserData) {
-            console.log(UserData)
+        }).then(function (user) {
+            console.log(user)
             var userObj = {
-                id: UserData.id,
-                name: UserData.name,
-                username: UserData.username,
-                email: UserData.email,
-                profilePic: UserData.profilePic
+                id: user.id,
+                name: user.name,
+                username: user.username,
+                email: user.email,
+                profilePic: user.profilePic
             }
-            req.session.user.loggedIn = true;
-            req.session.user.currentUser = userObj;
+            req.session.userObj.loggedIn = true;
+            req.session.user = userObj;
             res.json(userObj)
         })
     },
@@ -147,8 +147,8 @@ var bcrypt = require('bcrypt');
                 where: {
                     username: req.params.username
                 }
-            }).then(function (UserData) {
-                res.json(UserData)
+            }).then(function (user) {
+                res.json(user)
             })
         } else {
             res.status(404).json("please log in to update profile")

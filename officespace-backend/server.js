@@ -25,7 +25,6 @@ function userSetup(req, res, next) {
         console.log("Hit user setup");
         req.session.user = {
             id: null,
-            company: '',
             username: '',
             email: '',
             imgUrl: null,
