@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { Redirect } from 'react-router-dom';
+import axios from 'axios';
 import Header from '../Header/Header';
 import './side-bar.css';
 import {Col, Row, Container} from 'reactstrap';
@@ -30,6 +32,13 @@ showDropdownMenu(event){
 });
 }
 
+userLogOut = (cb) => {
+  axios.get("/api/logout").then((res) => {
+    console.log(res)
+    this.setState({ user: res.data });
+    <Redirect to="/" />
+  })
+}
 
 closeDropdownMenu(event){
   if(!this.dropdownMenu.contains(event.target)){
@@ -121,7 +130,7 @@ null
 )
 }
   </li>
- <li><a href="/"><i className="fas fa-power-off fa-lg" id="icons"></i>Sign Out</a></li>
+ <li onClick={this.userLogOut}><a href="/"><i className="fas fa-power-off fa-lg" id="icons"></i>Sign Out</a></li>
            
           
      </ul>

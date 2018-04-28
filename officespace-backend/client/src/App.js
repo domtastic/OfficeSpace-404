@@ -41,10 +41,10 @@ class App extends Component {
 
   checkLogin = (cb) => {
     axios.get("/api/session").then((res) => {
-      console.log(this.state, "this is checkloging state")
+      console.log(this.state, "this is checkLogin state")
       console.log(res)
       this.setState({ user: res.data });
-      console.log(this.state)
+      console.log('this is the user login', this.state)
       if (cb) {
         cb()
       }
@@ -55,14 +55,16 @@ class App extends Component {
     console.log(this.state)
     axios.post("/api/login", user).then((res, cb) => {
       console.log('this is the user info', user)
-      this.checkLogin(user)
-      if (this.state.redirect && this.props.userInfo.isAdmin) {
-        return <Redirect to={`/admin/${this.props.userInfo.username}`} />;
+      this.checkLogin(user).then(() => {
+      if (!this.state.redirect && this.props.user.isAdmin) {
+        return <Redirect to={`/admin/${this.props.user.username}`} />;
       }
-      else if (this.state.redirect && !this.props.userInfo.isAdmin){
-          return <Redirect to={`/client/${this.props.userInfo.username}`} />;
+      else if (!this.state.redirect && !this.props.user.isAdmin){
+          return <Redirect to={`/client/${this.props.user.username}`} />;
       }
-    })
+    });
+    });
+    
   }
 
   userLogOut = (cb) => {
@@ -78,10 +80,10 @@ class App extends Component {
     return (
    
         <div className="App">
-            {
+            {/* {
               this.state.user.loggedIn ? <SideBar userInfo={this.state.user} logout={this.userLogOut}/>
                   : null
-            }
+            } */}
         <Router>
           <div>
             <Switch>

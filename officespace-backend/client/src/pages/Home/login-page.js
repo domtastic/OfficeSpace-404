@@ -13,7 +13,7 @@ export default class Login extends Component {
     this.state = {
       username: "",
       password: "",
-        redirect: false
+      redirect: false
     };
   }
   validateForm() {
@@ -79,7 +79,7 @@ export default class Login extends Component {
        
                     <button className="btn btn" style={{marginTop:"-80px", width:"100%", marginLeft:"0", backgroundColor:"#53C6BA"}} onClick={() => {
                       this.props.handleLogin(this.state, () => {
-                          console.log(this.state);
+                          console.log('this is coming from login page', this.state);
                         this.setState({ redirect: true });
                       })
                     }}>Sign in</button>
