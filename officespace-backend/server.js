@@ -48,6 +48,8 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 require('./routes/api-routes')(app);
+require('./routes/s3-routes')(app);
+
 app.get("*", function(req, res) {
     res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });

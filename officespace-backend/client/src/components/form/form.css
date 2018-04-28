@@ -1,45 +1,65 @@
 
 
 .signin-form-group{
-	
+width: 730px;
+height: 90px;
+margin-left: 10px;
+padding: 15px 35px 35px 45px;
+border-color: #000;
 
-	width: 730px;
-	height:40px;
-	margin-left: 10px;
-	padding-left: 10px;
-	padding:35px;
-	border-color: #000 solid 1px;
-	
 }
 
 .card{
-	display: inline-block;
-	width: 50%;
-	height: 40px;
-	background-color:white;
+width: 480px;
+background-color: #ffffff;
+box-shadow: 10px 10px 25px #808080;
+margin: 30px auto 30px auto;
+}
+
+.paragraph-header{
+padding: 15px 50px 0 25px;
+font-size: 30px;
+font-weight: 400;
+display: inline-block;
+width: 50%;
+height: 40px;
+background-color:white;
 }
 
 #inputTextUsername{
-	width:50%;
+width:50%;
 }
 
 #inputTextPassword{
-	width:50%;
+width:50%;
 
 }
 
 #inputTextEmail{
-	width:50%;
+width:50%;
 }
 
 #inputTextBucket{
-	width:50%;
+width:50%;
 }
 
 #inputTextImgUrl{
-	width:50%;
+width:50%;
 }
 
 #inputSelectRegion{
-	width:50%;
+width:50%;
+}
+
+.form-submit-button{
+display: block;
+margin: 50px 50px;
+}
+
+.form-input-position{
+display: inline-block;
+}
+
+.email-position-correction{
+margin-top: 0;
 }

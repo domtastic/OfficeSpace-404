@@ -9,7 +9,7 @@ import "./App.css";
 import Login from './pages/Home/login-page';
 import Footer from './components/footer/footer';
 import SideBar from './components/sidebar/side-bar';
-import UserForm from './pages/UserFormPage';
+import UserForm from './components/form/form';
 import { Container, Row, Col } from 'reactstrap';
 import ManageClients from './pages/ManageClients/manage-clients';
 import SentFiles from './pages/SentFiles/SentFiles';

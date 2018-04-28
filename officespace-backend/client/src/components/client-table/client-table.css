@@ -1,13 +1,15 @@
 .client-table{
-    width: 80%;
+    width: 100%;
     padding: 15px;
+    max-width: 830px;
+    min-width: 510px;
 }
 
 .client-table-content{
     border-radius: 5px;
     background-color: #F8F8FF;
     padding: 5px 10px 0 10px;
-    box-shadow: 8px 8px 8px #D3D3D3;
+    box-shadow: 2px 2px 2px #D3D3D3;
 }
 
 .client-file-list{
@@ -27,25 +29,33 @@
 }
 
 .client-file-name{
-    flex-grow: 0.5;
-    color: #5063b8;
+    width: 70%;
+    color: #1E90FF;
+    text-align: left;
+    padding-left: 40px;
 }
 
 .client-file-link{
-    flex-grow: 0.55;
+    width: 25%;
+    /*position: relative;*/
+    /*right: 0;*/
+    margin-left: 3%;
+}
+
+.client-spacer{
+    flex-grow: 0.4;
 }
 
 .download-icon{
     height: 20px;
     width: auto;
-    margin-left: 56%;
 }
 
 .client-list-header{
     background-color: #F8F8FF;
     width: 100%;
-    display: flex;
-    flex-direction: row;
+    /*display: flex;*/
+    /*flex-direction: row;*/
     height: 50px;
     line-height: 30px;
     margin-top: 10px;
@@ -54,7 +64,6 @@
     border-radius: 5px;
     padding: 10px 0;
     box-shadow: 2px 2px 2px #D3D3D3;
-    padding-left: 15px;
 }
 
 .client-header-content{
@@ -63,14 +72,16 @@
     flex-direction: row;
 }
 
-.client-spacer-header{
-    flex-grow: 0.4;
-}
+/*.client-spacer-header{*/
+/*flex-grow: 0.2;*/
+/*}*/
 
 .client-header-name{
-    flex-grow: 0.5;
+    width: 70%;
+    text-align: left;
+    padding-left: 60px;
 }
 
 .client-header-link{
-    flex-grow: 0.2;
+    width: 25%;
 }

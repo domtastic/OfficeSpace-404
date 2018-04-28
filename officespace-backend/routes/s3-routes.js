@@ -3,6 +3,16 @@ const AWS = require('aws-sdk');
 const s3 = new AWS.S3();
 
 module.exports = (file) => {
+        file.post('/s3/buckets', (req, res) => {
+            s3.listBuckets(function(err, data) {
+                if (err) {
+                   console.log("Error", err);
+                } else {
+                 //   console.log("Bucket List", data.Buckets);
+                 console.log('here is the bucket response', data.Buckets)
+                }
+            });
+        });
     // FILE MANIPULATION
     file.get('/s3/files/:bucket', (req, res) => {
         // GET ALL FILES FROM BUCKET

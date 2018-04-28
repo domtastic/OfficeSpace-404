@@ -1,7 +1,6 @@
 
 import React, { Component } from 'react';
 import {s3Bucket} from '../../config'
-import {createUser, login} from '../../helpers/user';
 import './form.css';
 import AWS from 'aws-sdk';
 import uuid from 'uuid';
@@ -161,73 +160,72 @@ onClickSubmitForm(event)
 
 	this.setState({user});
 	console.log(this.state.user);
-	createUser(this.state.user).then((response) => {
+	// createUser(this.state.user).then((response) => {
 
-	console.log("Hey i got data after send post", response);
-	});
+	// console.log("Hey i got data after send post", response);
+	// });
 }
 
 	render()
 	{
 		return(
 
-			    <div className="main-panel" style={{
+            <div className="main-panel" style={{
 
 
 
-  width: "calc(100%-280px)",
-  height:"95vh",
-  overflow: "auto",
-  backgroundColor:"#fafcfe",
-  minHeight: "100%",
-  boxShadow: "0 30px 130px 0 rgba(90, 105, 116, 0.1)"
-}}>
-<Header/>
-			 <Card>
-			 <CardBody>
-			 <div className="user-form shadow">
-			
-			  <p className="font-form paragraph-header">User Form</p>
-				<div className="signin-form-group">
-                    <label htmlFor="inputTextUsername">Username</label>
-                    <input onKeyUp={this.onKeyUpInputTextUsername} type="text" className="form-control" id="inputTextUsername" placeholder="Username"/>
-                </div>
-                <div className="signin-form-group">
-                    <label htmlFor="inputTextPassword">Password</label>
-                    <input onKeyUp={this.onKeyUpInputTextPassword} type="password" className="form-control" id="inputTextPassword" placeholder="Password"/>
-                </div> 
-                 <div className="signin-form-group">
-                    <label htmlFor="inputTextEmail">Email</label>
-                    <input onKeyUp={this.onKeyUpInputTextEmail} type="text" className="form-control" id="inputTextEmail" placeholder="Email"/>
-                </div>
-                 {/* <div className="signin-form-group">
+                width: "calc(100%-280px)",
+                height:"95vh",
+                overflow: "auto",
+                backgroundColor:"#fafcfe",
+                minHeight: "100%",
+                boxShadow: "0 30px 130px 0 rgba(90, 105, 116, 0.1)"
+            }}>
+                <Card>
+                    <CardBody>
+                        <div className="user-form">
+
+                            <p className="font-form paragraph-header">User Form</p>
+                            <div className="signin-form-group">
+                                <label htmlFor="inputTextUsername">Username</label>
+                                <input onKeyUp={this.onKeyUpInputTextUsername} type="text" className="form-control form-input-position" id="inputTextUsername" placeholder="Username"/>
+                            </div>
+                            <div className="signin-form-group">
+                                <label htmlFor="inputTextPassword">Password</label>
+                                <input onKeyUp={this.onKeyUpInputTextPassword} type="password" className="form-control form-input-position" id="inputTextPassword" placeholder="Password" style={{marginTop: "0px"}}/>
+                            </div>
+                            <div className="signin-form-group">
+                                <label htmlFor="inputTextEmail">Email</label>
+                                <input onKeyUp={this.onKeyUpInputTextEmail} type="text" className="form-control form-input-position" id="inputTextEmail" placeholder="Email"/>
+                            </div>
+                            {/* <div className="signin-form-group">
                     <label htmlFor="inputTextBucket">Bucket</label>
                     <input onKeyUp={this.onKeyUpInputTextBucket} type="text" className="form-control" id="inputTextBucket" placeholder="Bucket"/>
                 </div> */}
-				 <div className="signin-form-group">
-                    <label htmlFor="inputTextImgUrl">Image URL</label>
-                    <input onKeyUp={this.onKeyUpInputTextImgUrl} type="text" className="form-control" id="inputTextImgUrl" placeholder="URL"/>
-                </div>
-  				<div className="signin-form-group">
-                    <label htmlFor="inputSelectRegion">Region</label>
-                    <select onChange={this.onChangeInputSelectRegion} className="form-control" 
-                    id="inputSelectRegion" >
-                    	<option value="option">Select Region</option>
-  						<option value="option">US-East-1 (Ohio)</option>
- 						<option value="option">US-East-2 (N. Virginia)</option>
- 						<option value="option">US-West-1 (Oregon)</option>
- 						<option value="option">US-West-2 (N. California)</option>
- 						<option value="option">EU-West-1 (Ireland)</option>
- 						<option value="option">EU-West-2 (London)</option>
- 						<option value="option">EU-West-3 (Paris)</option>
-					</select>
-				</div>		 
-		    <button onClick={this.onClickSubmitForm}  className="btn btn-info w-10">Submit</button>
+                            <div className="signin-form-group">
+                                <label htmlFor="inputTextImgUrl">Image URL</label>
+                                <input onKeyUp={this.onKeyUpInputTextImgUrl} type="text" className="form-control form-input-position" id="inputTextImgUrl" placeholder="URL"/>
+                            </div>
+                            <div className="signin-form-group">
+                                <label htmlFor="inputSelectRegion">Region</label>
+                                <select onChange={this.onChangeInputSelectRegion} className="form-control form-input-position"
+                                        id="inputSelectRegion" >
+                                    <option value="option">Select Region</option>
+                                    <option value="option">US-East-1 (Ohio)</option>
+                                    <option value="option">US-East-2 (N. Virginia)</option>
+                                    <option value="option">US-West-1 (Oregon)</option>
+                                    <option value="option">US-West-2 (N. California)</option>
+                                    <option value="option">EU-West-1 (Ireland)</option>
+                                    <option value="option">EU-West-2 (London)</option>
+                                    <option value="option">EU-West-3 (Paris)</option>
+                                </select>
+                            </div>
+                            <button onClick={this.onClickSubmitForm}  className="btn btn-info w-10 form-submit-button">Submit</button>
 
-        </div>
-        </CardBody>
-           </Card>
-	 </div>	
+                        </div>
+                    </CardBody>
+                </Card>
+            </div>
 
 	
 	);

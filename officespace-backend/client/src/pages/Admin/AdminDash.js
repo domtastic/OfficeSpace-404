@@ -7,6 +7,7 @@ import {Col, Row, Container, Card, CardBody, CardTitle} from 'reactstrap';
 
 
 
+
 const Dashboard = () => (
     <div className="main-panel" style={{
 
@@ -18,6 +19,7 @@ const Dashboard = () => (
   boxShadow: "0 30px 130px 0 rgba(90, 105, 116, 0.1)"
 }}>
 
+{/* <Header/> */}
 <SideBar/>
  
 
@@ -27,9 +29,10 @@ const Dashboard = () => (
 
 <AdminTable/>
 
+
 </Col>
 </div>
-<Footer/>
+{/* <Footer/> */}
 </div>
 
 );

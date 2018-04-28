@@ -17,14 +17,14 @@ background-repeat: no-repeat;
 
 
 
-width:20em;
+	width:20em;
 	margin-left: 25px;
 	border-color: #000 solid 1px;
 }
 
 
 
-#inputTextEmail{
+.inputTextEmail{
 	margin-top: -90px;
 }
 #inputTextPassword{
@@ -122,7 +122,7 @@ margin-left: -100px;
 
 
 }
-.fadeIn: hover {
+.fadeIn:hover {
   opacity: 0.01;
 }
 
