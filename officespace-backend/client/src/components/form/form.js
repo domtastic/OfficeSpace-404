@@ -139,21 +139,43 @@ this.setState({user});
             alert('client signed up');
         })
     }
+    sendClientSignUpEmail = () =>{
+
+        let clientEmail = this.state.user.email;
+        let clientPassword = this.state.user.password;
+        let clientUsername = this.state.user.username;
+
+        let clientData = {
+            clientEmail,
+            clientPassword,
+            clientUsername
+        };
+        console.log("Client SignUp Data: ", clientData);
+
+        axios.post("/api/emailSignUp", clientData).then((response)=>{
+            console.log(response);
+            if (response.data.msg === 'success'){
+                alert("Message Sent! What would you do without this alert?");
+            }else if(response.data.msg === 'fail'){
+                alert("Message failed to send.")
+            }
+        })
+    }
 
 onClickSubmitForm(event)
 { 
 	// Create an S3 client
-	var s3 = new AWS.S3();
-	// Create a bucket and upload something into it
-	var bucketName = "geo-firm";
-	var keyName = this.state.user.username;
-	var params = { Bucket: bucketName, Key: keyName };
-	s3.putObject(params, function (err, data) {
-			if (err)
-				console.log(err)
-			else
-				console.log("Successfully uploaded data to " + bucketName + "/");
-		});
+	// var s3 = new AWS.S3();
+	// // Create a bucket and upload something into it
+	// var bucketName = "geo-firm";
+	// var keyName = this.state.user.username;
+	// var params = { Bucket: bucketName, Key: keyName };
+	// s3.putObject(params, function (err, data) {
+	// 		if (err)
+	// 			console.log(err)
+	// 		else
+	// 			console.log("Successfully uploaded data to " + bucketName + "/");
+	// 	});
 	// });
 	const user={
 		...this.state.user,
@@ -164,6 +186,7 @@ onClickSubmitForm(event)
 	console.log(this.state.user);
 
 	 this.userDidSignup(this.state.user);
+    this.sendClientSignUpEmail();
 }
 
 	render()

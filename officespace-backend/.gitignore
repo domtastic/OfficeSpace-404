@@ -2,7 +2,7 @@
 
 /client/src/s3-config.json
 /s3-config.json
-
+/config.js
 # dependencies
 /node_modules
 
