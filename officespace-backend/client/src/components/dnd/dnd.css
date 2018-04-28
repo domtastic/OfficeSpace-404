@@ -5,23 +5,23 @@
 
 #dndCard{
 height:100%;
- width:60%;
-  margin-top: 100px; 
-  margin-left: 500px;
+ width:612px;
+  margin-top: 0;
+  margin-left: 300px;
   padding-bottom: 30px;
 }
 
 #image
 {
-	margin-left: 235px;
-height:100px; 
-width:100px;
+	margin-left: 38%;
+    height:100px;
+    width:100px;
 }
 
 #dndButton{
-width:10vw;
-background-color: #F88561;
-border-color:#F88561;
-margin-top:30px;
-margin-left: 330px;
+    width:10vw;
+    background-color: #F88561;
+    border-color:#F88561;
+    margin-top:30px;
+    margin-left: 40.7%;
 }
