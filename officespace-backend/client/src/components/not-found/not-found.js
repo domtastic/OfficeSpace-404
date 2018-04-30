@@ -28,7 +28,7 @@ function NotFound() {
 			
 			<p className="lead" style={{fontFamily:"nunito", fontWeight:"bold", color:"#ffffff", fontSize:"30px", marginLeft:"10px"}}>This is so embarrassing...</p>
 
-			<Button href={'/dashboard'} style={{ marginTop:"60px", marginLeft:"-5px",backgroundColor:"#1698b8", borderRadius:"15px", color: "#ffffff", width:"160px"
+			<Button href={'/dashboard'} style={{ marginTop:"60px", marginLeft:"-5px",backgroundColor:"#1698b8", borderRadius:"15px", color: "#ffffff", width:"160px", borderColor:"#1698b8"
 			}}>Go back home</Button>
 
 			<div className="img">

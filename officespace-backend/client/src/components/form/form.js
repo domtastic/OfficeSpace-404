@@ -205,7 +205,7 @@ onClickSubmitForm(event)
                 boxShadow: "0 30px 130px 0 rgba(90, 105, 116, 0.1)"
             }}>
                 <Card>
-                    <CardBody>
+                    <CardBody id="card-body">
                         <div className="user-form">
 
                             <p className="font-form paragraph-header">User Form</p>

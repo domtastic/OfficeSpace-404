@@ -4,9 +4,6 @@
   width: 100px;
   margin-right: 10px;
 
-
-
-
 }
 
 
@@ -22,7 +19,6 @@
   z-index: 1;
   color: #ffffff;
   font-weight: 200;
-  transition-duration: .2s, .2s, .35s;
 
 }
 
@@ -77,17 +73,15 @@ background-color: #5063b8;
 }
 
 .list-unstyled{
-  padding-left: 0;
+  padding-left: 10px;
   margin-bottom: 0;
   list-style: none;
+  position:absolute;
+  display: inline-block;
 }
 
-.list-unstyled>li{
-  position: relative;
-  display: block;
-}
 
-.sidebar > .sidebar-wrapper > .list-unstyled > #icons > a{
+.sidebar > .sidebar-wrapper > #icons > a{
   font-size: 20px;
   float: left;
   margin-right: 15px;
@@ -123,7 +117,6 @@ body {
 }
 
 p {
-    font-family: 'Nunito', sans-serif;
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
@@ -165,14 +158,8 @@ a[data-toggle="collapse"] {
 }
 
 .sidebar li:hover {
-  border-left: 3px solid #6FCDC8
-;
+  border-left: 3px solid #6FCDC8;
 
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  transition: all 1s ease;
 }
 
 
@@ -187,10 +174,6 @@ background-image: linear-gradient(to top, #95a4dc, #7e8ed0, #6778c4, #5063b8, #3
     background: #6FCDC8;
 }
 
-.sidebar ul.components {
-    padding: 20px 0;
-
-}
 .sidebar ul p {
     color: #C7CEDB;
     padding: 10px;
@@ -204,13 +187,10 @@ background-image: linear-gradient(to top, #95a4dc, #7e8ed0, #6778c4, #5063b8, #3
 .sidebar ul li a:hover {
     color: #6FCDC8;
     background: #D6DCE6;
+    padding: 25px;
 }
 
-.sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #fff;
-    border-left: 3px solid #6FCDC8;
-   
-}
+
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
@@ -229,9 +209,6 @@ li{
 
 
 .fa-file{
-/*  margin-left: -10px;
-  margin-right:15px;
-  margin-bottom: -70px;*/
   font-size: 20px;
   float: left;
   margin-right: 15px;
@@ -241,7 +218,7 @@ li{
 }
 
 .fa-envelope{
-             font-size: 20px;
+ font-size: 20px;
   float: left;
   margin-right: 15px;
   line-height: 30px;
@@ -250,7 +227,7 @@ li{
 }
 
 .fa-tachometer-alt{
-               font-size: 20px;
+  font-size: 20px;
   float: left;
   margin-right: 15px;
   line-height: 30px;
@@ -259,9 +236,6 @@ li{
 }
 
 .fa-users{
-
-     
-
   font-size: 20px;
   float: left;
   margin-top: 50px;
@@ -272,9 +246,7 @@ li{
 }
 
 .fa-power-off{
-
-
-         font-size: 20px;
+  font-size: 20px;
   float: left;
   margin-right: 15px;
   line-height: 30px;
@@ -284,8 +256,6 @@ li{
 
 #files{
   margin-top: -40px;
-
-
 }
 
 .btn{
@@ -306,4 +276,8 @@ li{
     color: #000;
     width: 40px;
     text-align: center;
+  }
+
+  .nav-side-menu{
+    padding-right: 90px;
   }
