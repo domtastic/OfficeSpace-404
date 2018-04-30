@@ -6,6 +6,10 @@ upload, download, and maintain client files.
 
 ![OfficeSpace Demo](./demo/mac-laptop-png-13.gif "OfficeSpace Demo")
 
+The application is built with React and uses AWS technology.
+
+![OfficeSpace Demo](./demo/mac-laptop-png-14.gif "OfficeSpace Demo")
+
 ## Getting Started
 1. git clone (https://github.com/domtastic/OfficeSpace-404.git) the repository to your local computer
 2. cd OfficeSpace-404
