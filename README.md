@@ -1,16 +1,16 @@
 # OfficeSpace
 
 ## Overview
-OfficeSpace is an application intended for business to business use cases. The core functionality is to
-upload, download, and maintain client files.
+OfficeSpace is an application that makes it easy for businesses to manage their clients and securly send and receive large documents. This website demonstrates a full stack application with a component based front end using ReactJS and Reactstrap for styling. The backend is implemented using Node.js, AWS, nodemailer, mongoDB, mongoose, and express. 
+<img src="./demo/mac-laptop-png-13.gif" width="500px" height="300px"/>
 
-![OfficeSpace Demo](./demo/mac-laptop-png-13.gif "OfficeSpace Demo")
+The application is separated into Admin and Client sides to demonstrate the send/receive file functionality. Companies have the ability to sign up clients through the website which sends a confirmation email to the client that gives them a specific password to use the app. 
 
-The application is built with React and uses AWS technology.
+<img src="./demo/mac-laptop-png-14.gif" width="500px" height="300px"/> 
 
-![OfficeSpace Demo](./demo/mac-laptop-png-14.gif "OfficeSpace Demo")
+In addition to adding clients, businesses can delete client profiles for a better managament system. There is an upload file route that includes a drag and drop feature. The application allows companies to take their business wherever they are. Follow the instructions below to get the full experience.
 
-![OfficeSpace Demo](./demo/mac-laptop-png-15.gif "OfficeSpace Demo")
+<img src="./demo/mac-laptop-png-15.gif" width="500px" height="300px"/>
 
 ## Getting Started
 1. git clone (https://github.com/domtastic/OfficeSpace-404.git) the repository to your local computer
