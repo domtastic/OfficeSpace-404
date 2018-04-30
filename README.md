@@ -10,6 +10,8 @@ The application is built with React and uses AWS technology.
 
 ![OfficeSpace Demo](./demo/mac-laptop-png-14.gif "OfficeSpace Demo")
 
+![OfficeSpace Demo](./demo/mac-laptop-png-15.gif "OfficeSpace Demo")
+
 ## Getting Started
 1. git clone (https://github.com/domtastic/OfficeSpace-404.git) the repository to your local computer
 2. cd OfficeSpace-404
