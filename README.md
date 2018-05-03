@@ -1,5 +1,6 @@
 # OfficeSpace
 
+Demo Link (https://office404.herokuapp.com/)
 ## Overview
 OfficeSpace is an application that makes it easy for businesses to manage their clients and securly send and receive large documents. This website demonstrates a full stack application with a component based front end using ReactJS and Reactstrap for styling. The backend is implemented using Node.js, AWS, nodemailer, mongoDB, mongoose, and express. 
 <img src="./demo/mac-laptop-png-13.gif" width="500px" height="300px"/>
